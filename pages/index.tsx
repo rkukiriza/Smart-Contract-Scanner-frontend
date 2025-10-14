@@ -15,7 +15,7 @@ const Cell = dynamic(() => import("recharts").then((m) => m.Cell), { ssr: false 
 const BarChart = dynamic(() => import("recharts").then((m) => m.BarChart), { ssr: false });
 const Bar = dynamic(() => import("recharts").then((m) => m.Bar), { ssr: false });
 const CartesianGrid = dynamic(() => import("recharts").then((m) => m.CartesianGrid), { ssr: false });
-const Legend = dynamic(() => import("recharts").then((m) => m.Legend), { ssr: false });
+const Legend = dynamic(() => import("recharts").then((m) => m.Legend as any), { ssr: false });
 
 // --- 1. DATA TYPES ---
 type Network = { id: string; name: string };
