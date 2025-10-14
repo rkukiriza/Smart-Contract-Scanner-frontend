@@ -367,7 +367,7 @@ export default function IndexPage() {
                           labelLine={false}
                           paddingAngle={5}
                           label={(props) => {
-                            const { name, percent } = props as { name: string; percent: number };
+                            const { name, percent } = props as unknown as { name: string; percent: number };
                             return `${name} (${(percent * 100).toFixed(0)}%)`;
                           }}
                         >
