@@ -355,11 +355,23 @@ export default function IndexPage() {
                     <ResponsiveContainer width="100%" height="100%">
                       <PieChart>
                         <Pie
-                          data={severityData} dataKey="value" nameKey="name" cx="50%" cy="50%"
-                          outerRadius={100} fill="#8884d8" labelLine={false} paddingAngle={5}
-                          label={({ name, percent }: { name: string; percent: number }) => `${name} (${(percent * 100).toFixed(0)}%)`}
+                          data={severityData}
+                          dataKey="value"
+                          nameKey="name"
+                          cx="50%"
+                          cy="50%"
+                          outerRadius={100}
+                          fill="#8884d8"
+                          labelLine={false}
+                          paddingAngle={5}
+                          label={(props) => {
+                            const { name, percent } = props as { name: string; percent: number };
+                            return `${name} (${(percent * 100).toFixed(0)}%)`;
+                          }}
                         >
-                          {severityData.map((entry, index) => (<Cell key={`cell-${index}`} fill={entry.color} />))}
+                          {severityData.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={entry.color} />
+                          ))}
                         </Pie>
                         <Tooltip contentStyle={{ backgroundColor: '#1f2937', border: 'none', color: '#fff' }} />
                         <Legend layout="vertical" align="right" verticalAlign="middle" wrapperStyle={{ color: 'white' }} />
