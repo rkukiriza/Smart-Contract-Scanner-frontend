@@ -57,7 +57,7 @@ It allows users to scan Ethereum smart contracts for vulnerabilities, view risk 
 - You can further customize the dashboard by generating new components on v0.dev and integrating them into your React code.
 
 ## License
+- MIT
 
-MIT
 
 ---
