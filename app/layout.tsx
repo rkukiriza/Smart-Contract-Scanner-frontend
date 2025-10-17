@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
+import { ThemeProvider } from "@/components/theme-provider"
 export const metadata: Metadata = {
   title: "Smart Contract Vulnerability Scanner",
   description: "Scan and analyze smart contracts for security vulnerabilities",
