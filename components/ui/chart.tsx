@@ -1,7 +1,8 @@
 "use client"
 import * as React from "react"
 import * as RechartsPrimitive from "recharts"
-import {TooltipProps, ValueType, NameType } from "recharts";
+import {TooltipProps} from "recharts"
+import {ValueType, NameType } from "recharts/types/component/DefaultTooltipContent";
 import { cn } from "@/lib/utils"
 
 // Format: { THEME_NAME: CSS_SELECTOR }
