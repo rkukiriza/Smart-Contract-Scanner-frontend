@@ -113,6 +113,7 @@ function ChartTooltipContent({
   hideIndicator = false,
   label,
   labelFormatter,
+  labelClassName
   formatter,
   color,
   nameKey,
