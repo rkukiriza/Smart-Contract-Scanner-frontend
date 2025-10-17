@@ -266,10 +266,10 @@ function ChartLegendContent({
     >
       {payload
         .filter((item: any ) => item.type !== "none")
-        .map((item : any) => {
+        .map((item : any, index : number) => {
           const key = `${nameKey || item.dataKey || "value"}`
           const itemConfig = getPayloadConfigFromPayload(config, item, key)
-
+        
           return (
             <div
               key={item.value}
@@ -292,7 +292,7 @@ function ChartLegendContent({
           )
         })}
     </div>
-  )
+    )
 }
 
 // Helper to extract item config from a payload.
