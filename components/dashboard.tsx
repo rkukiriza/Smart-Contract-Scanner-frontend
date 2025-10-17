@@ -1091,7 +1091,7 @@ if (block.number % 2 == 0) {
                           outerRadius={50}
                           paddingAngle={5}
                           dataKey="value"
-                          label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                          label={({ name, percent }: any) => `${name}: ${(percent * 100).toFixed(0)}%`}
                         >
                           {codeDistributionData.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={entry.fill} />
@@ -1169,7 +1169,7 @@ if (block.number % 2 == 0) {
                           cx="50%"
                           cy="50%"
                           labelLine={false}
-                          label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                          label={({ name, percent }: any) => `${name}: ${(percent * 100).toFixed(0)}%`}
                           outerRadius={80}
                           dataKey="value"
                         >
@@ -1242,7 +1242,7 @@ if (block.number % 2 == 0) {
                           cx="50%"
                           cy="50%"
                           labelLine={false}
-                          label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                          label={({ name, percent }: any) => `${name}: ${(percent * 100).toFixed(0)}%`}
                           outerRadius={100}
                           dataKey="value"
                         >
