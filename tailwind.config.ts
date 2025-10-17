@@ -9,7 +9,7 @@ const config: Config = {
   ],
   
   // Necessary for modern Shadcn/ui theme toggling
-  darkMode: ["class"], 
+  darkMode: "class", 
 
   theme: {
     extend: {
