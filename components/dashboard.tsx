@@ -34,7 +34,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Table, TableBody, TableCell, TableHead, TableHeader } from "@/components/ui/table"
+import { Table, TableBody, TableCell, TableHead, TableHeader,TableRow } from "@/components/ui/table"
 
 // Local fallback TableRow in case the ui/table module doesn't export it
 // const TableRow: React.FC<any> = (props) => <tr {...props} /> //
@@ -46,7 +46,7 @@ import {
   DialogDescription, // Added
   DialogHeader, // Added
   DialogTitle, // Added
-} from "@/components/ui/dialogbox"
+} from "@/components/ui/dialog"
 import {
   LineChart,
   Line,
