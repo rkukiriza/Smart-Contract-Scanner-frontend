@@ -1,8 +1,7 @@
 "use client"
-
 import * as React from "react"
 import * as RechartsPrimitive from "recharts"
-
+import {TooltipProps, ValueType, NameType } from "recharts";
 import { cn } from "@/lib/utils"
 
 // Format: { THEME_NAME: CSS_SELECTOR }
@@ -104,7 +103,10 @@ ${colorConfig
 
 const ChartTooltip = RechartsPrimitive.Tooltip
 
-function ChartTooltipContent({
+function ChartTooltipContent<
+TValue extends ValueType,
+  TName extends NameType
+>({
   active,
   payload,
   className,
@@ -113,18 +115,16 @@ function ChartTooltipContent({
   hideIndicator = false,
   label,
   labelFormatter,
-  labelClassName,
   formatter,
   color,
   nameKey,
   labelKey,
-}: React.ComponentProps<typeof RechartsPrimitive.Tooltip> &
-  React.ComponentProps<"div"> & {
-    hideLabel?: boolean
-    hideIndicator?: boolean
-    indicator?: "line" | "dot" | "dashed"
-    nameKey?: string
-    labelKey?: string
+}: TooltipProps<TValue, TName> & {
+  indicator?: "line" | "dot" | "dashed";
+  hideLabel?: boolean;
+  hideIndicator?: boolean;
+  nameKey?: string;
+  labelKey?: string;
   }) {
   const { config } = useChart()
 
