@@ -1091,8 +1091,7 @@ if (block.number % 2 == 0) {
                           outerRadius={50}
                           paddingAngle={5}
                           dataKey="value"
-                          label={({ name, percent }: any) => 
-                          `${name}: ${(percent * 100).toFixed(0)}%`}
+                          label={({ name, percent }: any) =>`${name}: ${(percent * 100).toFixed(0)}%`}
                           
                         >
                           {codeDistributionData.map((entry, index) => (
