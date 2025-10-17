@@ -255,7 +255,7 @@ function ChartLegendContent({
   Pick<RechartsPrimitive.LegendProps, "payload" | "verticalAlign"> & {
     hideIcon?: boolean
     nameKey?: string
-  }) {
+  }: any) {
   const { config } = useChart()
 
   if (!payload?.length) {
@@ -271,8 +271,8 @@ function ChartLegendContent({
       )}
     >
       {payload
-        .filter((item) => item.type !== "none")
-        .map((item) => {
+        .filter((item: any ) => item.type !== "none")
+        .map((item : any) => {
           const key = `${nameKey || item.dataKey || "value"}`
           const itemConfig = getPayloadConfigFromPayload(config, item, key)
 
